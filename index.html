@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+</head>
+
+<body>
+    <div>
+        <div class="item">
+            <form action="" name="name_form" method="get">
+                <div>
+                    <div>姓名</div>
+                    <div>
+                        <input type="text" id="your_name" placeholder="输入你的名字" value="张三" />
+                    </div>
+                </div>
+                <div>
+                    <div>高中</div>
+                    <div>
+                        <input type="text" id="your_school" placeholder="输入你的学校名字" value="复旦附中" />
+                    </div>
+                </div>
+                <div>
+                    <div>性别</div>
+                    <div>
+                        <input type="radio" name="your_sex" id="your_sex_male" value="男" checked="true" />
+                        男
+                        <input type="radio" name="your_sex" id="your_sex_female" value="女" />
+                        女
+                    </div>
+                </div>
+
+                <input type="text" id="other" placeholder="输入其他名称" value="亚麻哈哈" />
+
+                <div>
+                    <button type="button" onclick="javascript:gen_zkz_func();">
+                        生成准考证图片
+                    </button>
+                </div>
+            </form>
+        </div>
+        <div class="item">
+            <img id="base" style="display: none;" src="./cert.jpg" data-bd-imgshare-binded="1" />
+            <canvas id="temp" style="display: none;"></canvas>
+        </div>
+    </div>
+    <script src="//cdn.bootcdn.net/ajax/libs/jquery/3.6.0/jquery.js"></script>
+    <link rel="stylesheet" href="./index.css">
+    <script src="./index.js"></script>
+</body>
+
+</html>
